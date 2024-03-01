@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduled Test User Details</title>
+</head>
+<body>
+    <h1>Applicants for Test 1</h1>
+    <ul>
+        {% for applicant in applicants_1 %}
+        <li>
+            <strong>Name:</strong> {{ applicant.candidate.name }}<br>
+            <strong>Email:</strong> {{ applicant.candidate.email }}<br>
+            <strong>Mobile No:</strong> {{ applicant.candidate.mobile_no }}<br>
+            <strong>Candidate ID:</strong> {{ applicant.candidate.candidate_id }}<br>
+            <strong>Application ID:</strong> {{ applicant.application_id }}<br>
+            <strong>Position Shortlisted For:</strong> {{ applicant.position_shortlisted_for }}<br>
+            <strong>Branch Shortlisted For:</strong> {{ applicant.branch_shortlisted_for }}<br>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h1>Applicants for Test 2</h1>
+    <ul>
+        {% for applicant in applicants_2 %}
+        <li>
+            <strong>Name:</strong> {{ applicant.candidate.name }}<br>
+            <strong>Email:</strong> {{ applicant.candidate.email }}<br>
+            <strong>Mobile No:</strong> {{ applicant.candidate.mobile_no }}<br>
+            <strong>Candidate ID:</strong> {{ applicant.candidate.candidate_id }}<br>
+            <strong>Application ID:</strong> {{ applicant.application_id }}<br>
+            <strong>Position Shortlisted For:</strong> {{ applicant.position_shortlisted_for }}<br>
+            <strong>Branch Shortlisted For:</strong> {{ applicant.branch_shortlisted_for }}<br>
+        </li>
+        {% endfor %}
+    </ul>
+
+    {% if error_message %}
+    <p>{{ error_message }}</p>
+    {% endif %}
+</body>
+</html>
